@@ -18,6 +18,15 @@
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
     </properties>
     <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>com.allanji.guilmall</groupId>-->
+<!--            <artifactId>gulimall-common</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/../gulimall-common/target/gulimall-common-0.0.1-SNAPSHOT.jar</systemPath>-->
+<!--&lt;!&ndash;            <systemPath>C:\Users\skyco\.m2\repository\com\allanji\gulimall\gulimall-common\0.0.1-SNAPSHOT\gulimall-common-0.0.1-SNAPSHOT.jar</systemPath>&ndash;&gt;-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -32,6 +41,23 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.allanji.gulimall</groupId>
+            <artifactId>gulimall-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-extension</artifactId>-->
+<!--            <version>3.5.2</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.allanji.gulimall</groupId>-->
+<!--            <artifactId>gulimall-common</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
     </dependencies>
     <dependencyManagement>
         <dependencies>
