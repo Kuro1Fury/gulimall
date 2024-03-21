@@ -28,7 +28,15 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *   4) 配置分组
  *     默认所有配置集都属于DEFAULT_GROUP，可以根据业务随意定义分组
  *
- * 本项目：每个微服务创建自己的命名空间，使用配置分组区分环境
+ *     本项目：每个微服务创建自己的命名空间，使用配置分组区分环境
+ *
+ * 3. 同时加载多个配置集
+ *   1) 微服务任何配置信息，任何配置文件都可以放在配置中心
+ *   2) 只需要在bootstrap.properties说明加载配置中心的哪些配置文件即可
+ *   3) @Value，@ConfigurationProperties...
+ *   以前SpringBoot任何方法从配置文件中获取值，都能使用
+ *   配置中心有的配置文件，优先使用配置中心的配置
+ *
  */
 @EnableDiscoveryClient
 @SpringBootApplication
