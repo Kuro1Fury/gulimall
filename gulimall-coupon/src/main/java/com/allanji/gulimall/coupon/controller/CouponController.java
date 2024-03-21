@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,7 @@ import com.allanji.gulimall.coupon.service.CouponService;
 import com.allanji.common.utils.PageUtils;
 import com.allanji.common.utils.R;
 
+import javax.annotation.RegEx;
 
 
 /**
@@ -24,11 +27,23 @@ import com.allanji.common.utils.R;
  * @email skycoder@gmail.com
  * @date 2024-03-20 19:12:26
  */
+@RefreshScope
 @RestController
 @RequestMapping("coupon/coupon")
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    @Value("${coupon.user.name}")
+    public String name;
+    @Value("${coupon.user.age}")
+    public Integer age;
+
+    /** 测试配置中心 */
+    @RequestMapping("/test")
+    public R test() {
+        return R.ok().put("name", name).put("age", age);
+    }
 
     /** 远程调用测试方法，永远返回优惠券 */
     @RequestMapping("/member/list")
