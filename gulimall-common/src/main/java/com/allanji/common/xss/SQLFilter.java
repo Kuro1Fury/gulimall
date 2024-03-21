@@ -8,7 +8,7 @@
 
 package com.allanji.common.xss;
 
-import io.renren.common.exception.RRException;
+import com.allanji.common.utils.RRException;
 import org.apache.commons.lang.StringUtils;
 
 /**
